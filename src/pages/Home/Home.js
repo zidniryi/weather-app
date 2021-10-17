@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Card, Col, Container, Row } from "react-bootstrap";
 
-import { converToJson } from "../../helper";
 import Menu from "../../component/Menu/Menu";
 import { bmkgRules } from "../../Constant/bmkgRules";
 import { Link } from "react-router-dom";
 import { imageRules } from "../../Constant/imageRules";
+import { converToJson } from '../../helper/converToJson';
 
 function Home() {
   const [dataMe, setdata] = useState({});

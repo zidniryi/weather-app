@@ -22,8 +22,7 @@ export const bmkgRules = (datafromBMKG) => {
       break;
     case 45:
       day = "Kabut";
-    case 0:
-      day = "Sunday";
+      break;
     case 60:
       day = "Hujan Ringan";
       break;
@@ -41,6 +40,9 @@ export const bmkgRules = (datafromBMKG) => {
       break;
     case 97:
       day = "Hujan Petir ";
+    // eslint-disable-next-line no-fallthrough
+    default:
+      console.log(`Sorry, we are out of ${day}.`);
   }
   return day;
 };

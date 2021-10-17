@@ -22,6 +22,9 @@ export const imageRules = (datafromBMKG) => {
       image =
         "https://suarabanyumas.com/wp-content/uploads/2019/01/kebun-teh-kaligua-663x375.jpg";
       break;
+        // eslint-disable-next-line no-fallthrough
+    default:
+      console.log(`Sorry, we are out of ${image}.`);
   }
   return image;
 };

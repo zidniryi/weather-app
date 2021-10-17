@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from "react";
-import { Card, CardGroup, Col, Container, Row } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Col, Container, Row } from "react-bootstrap";
 import CardView from '../../component/CardView/CardView';
 import Menu from "../../component/Menu/Menu";
 export default function Dashboard() {

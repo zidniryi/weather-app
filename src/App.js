@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
-import Home from "./pages/Home.js/Home";
+import Home from "./pages/Home/Home";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Detail from "./pages/Detail/Detail";
 
