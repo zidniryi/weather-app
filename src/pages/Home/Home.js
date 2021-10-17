@@ -50,7 +50,6 @@ function Home() {
           <Row>
             {dataMe &&
               dataMe.area?.slice(0, 5)?.map((nameArea, index) => {
-                console.log(nameArea, "Shit", nameArea._attributes.level);
                 return (
                   <Col md={4} key={index}>
                     <Link
