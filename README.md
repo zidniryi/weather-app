@@ -8,6 +8,10 @@ Demo video APP in [Youtube](https://youtu.be/c5XvPzgttZg)
 
 ## Available Scripts
 
+Install node :
+
+### `yarn or npm i`
+
 In the project directory, you can run:
 
 ### `yarn start`
