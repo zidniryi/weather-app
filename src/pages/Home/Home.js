@@ -7,9 +7,11 @@ import { bmkgRules } from "../../Constant/bmkgRules";
 import { Link } from "react-router-dom";
 import { imageRules } from "../../Constant/imageRules";
 import { converToJson } from '../../helper/converToJson';
+import Swal from 'sweetalert2';
 
 function Home() {
   const [dataMe, setdata] = useState({});
+  const [isError, setisError] = useState(false)
 
   /**
    * Get Data From API BMKG and covert it into JSON
@@ -25,15 +27,21 @@ function Home() {
 
       const datares = converToJson(response.data);
       setdata(datares.data.forecast);
+      setisError(false)
     } catch (error) {
-      console.log(error);
+      setisError(true)
+        Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Something went wrong with the API!',
+      })
     }
   };
 
   useEffect(() => {
     getData();
   }, []);
-
+  if(isError) return <h2>Server sedang error, coba lagi nanti..</h2>
   return (
     <>
       <Menu />

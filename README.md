@@ -2,6 +2,10 @@
 
 This project was created with API BMKG [BMKG](https://www.bmkg.go.id/)
 
+## Demo Video
+
+Demo video APP in [Youtube](https://youtu.be/c5XvPzgttZg)
+
 ## Available Scripts
 
 In the project directory, you can run:
