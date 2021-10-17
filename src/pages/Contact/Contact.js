@@ -55,7 +55,10 @@ export default function Contact() {
           <br />
           <label>Message</label>
           <textarea
-            {...register("message", { pattern: /^[A-Za-z]+$/i })}
+            {...register("message", { 
+              required: true,
+              pattern: /^([a-zA-Z]+[\s'.]?)+\S$/ 
+            })}
             class="form-control"
           />
           {errors?.message?.type === "pattern" && (
