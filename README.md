@@ -36,3 +36,9 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+## What's next for this project BMKG API
+
+### What Next For Code : Redux, Redux Middleware, Unit Testing , Snapshoot and UI Kit Story
+
+### What For Dev : Eslint, Linter, Setup CI CD
