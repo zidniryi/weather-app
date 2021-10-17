@@ -16,10 +16,7 @@ export default function Detail({ location }) {
           class="text-success"
           style={{ marginTop: "2%", marginBottom: "1%" }}
         >
-          Kota:{" "}
-          {state
-            ? state?.nameArea?._attributes.description
-            : "Loading.."}
+          Kota: {state ? state?.nameArea?._attributes.description : "Loading.."}
         </h1>
 
         <div class="row">
@@ -28,13 +25,10 @@ export default function Detail({ location }) {
           </div>
 
           <div class="col-md-4">
-            <h3 class="my-3">
-              Provinsi {state?.nameArea._attributes?.domain}
-            </h3>
+            <h3 class="my-3">Provinsi {state?.nameArea._attributes?.domain}</h3>
             <p>Tanggal: {new Date().toLocaleString("en-GB")}</p>
             <h3 class="my-3">
-              Cuaca :{" "}
-              {bmkgRules(parseInt(state?.nameArea._attributes.level))}
+              Cuaca : {bmkgRules(parseInt(state?.nameArea._attributes.level))}
             </h3>
             <ul>
               <li>Latitude : {state?.nameArea._attributes?.latitude}</li>

@@ -6,12 +6,12 @@ import Menu from "../../component/Menu/Menu";
 import { bmkgRules } from "../../Constant/bmkgRules";
 import { Link } from "react-router-dom";
 import { imageRules } from "../../Constant/imageRules";
-import { converToJson } from '../../helper/converToJson';
-import Swal from 'sweetalert2';
+import { converToJson } from "../../helper/converToJson";
+import Swal from "sweetalert2";
 
 function Home() {
   const [dataMe, setdata] = useState({});
-  const [isError, setisError] = useState(false)
+  const [isError, setisError] = useState(false);
 
   /**
    * Get Data From API BMKG and covert it into JSON
@@ -24,24 +24,25 @@ function Home() {
           "Content-Type": "application/xml; charset=utf-8",
         }
       );
-
+      // Convert xml to json data
       const datares = converToJson(response.data);
+
       setdata(datares.data.forecast);
-      setisError(false)
+      setisError(false);
     } catch (error) {
-      setisError(true)
-        Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Something went wrong with the API!',
-      })
+      setisError(true);
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong with the API!",
+      });
     }
   };
 
   useEffect(() => {
     getData();
   }, []);
-  if(isError) return <h2>Server sedang error, coba lagi nanti..</h2>
+  if (isError) return <h2>Server sedang error, coba lagi nanti..</h2>;
   return (
     <>
       <Menu />

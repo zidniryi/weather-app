@@ -1,4 +1,8 @@
 
+/**
+ * 
+ * @param {Object} data from item storage 
+ */
 export function SaveDataToLocalStorage(data)
 {
     let a = [];
